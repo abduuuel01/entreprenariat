@@ -1,0 +1,499 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap");
+
+body {
+  padding: 0;
+  margin: 0;
+  width: 100vw;
+  overflow-x: hidden;
+  background-color: rgb(255, 255, 255);
+}
+a{
+  text-decoration: none;
+}
+/*Slide Show*/
+.slideShowContainer {
+  position: absolute;
+  top: 100px;
+  height: 80vh;
+  width: 100vw;
+  overflow: hidden;
+}
+
+.slideshow {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  transform: translateX(-50%);
+}
+.slideshow-first {
+  z-index: 3;
+  left: 0;
+  top: 50%;
+  height: 85%;
+  transform: translateY(-50%) skewY(-10deg);
+  transform-origin: center;
+  overflow: hidden;
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.25);
+}
+.slideshow-first .slides {
+  position: absolute;
+  left: 0;
+  top: -10%;
+  width: 100vw;
+  height: 100vh;
+  animation: 11s slideshow-first-mobile -3s infinite;
+}
+.slideshow-first .slide1 {
+  background-image: url(../images/el\ jebha.jpg);
+  animation: 20s slides-set-1 -0.1s infinite;
+}
+.slideshow-first .slide2 {
+  background-image: url(../images/todgha.jpg);
+  animation: 20s slides-set-2 -0.1s infinite;
+}
+.slideshow-first .slide3 {
+  background-image: url(../images/daliya.jpg);
+  animation: 20s slides-set-3 -0.1s infinite;
+}
+@media (min-width: 600px) {
+  .slideshow-first {
+    left: 50%;
+    top: 0;
+    width: 67%;
+    height: 100%;
+    transform: translateX(-50%) skewX(-10deg);
+  }
+  .slideshow-first .slides {
+    top: 0;
+    left: -25%;
+    height: 100%;
+    animation: 11s slideshow-first -3s infinite;
+  }
+}
+.slideshow--contrast {
+  z-index: 1;
+  width: 100%;
+  height: 50%;
+  transform: none;
+}
+.slideshow--contrast--before {
+  left: 0;
+}
+.slideshow--contrast--before .slides {
+  width: 100vw;
+}
+.slideshow--contrast--after {
+  z-index: 2;
+  left: auto;
+  right: 0;
+}
+.slideshow--contrast--after .slides {
+  width: 100vw;
+  left: auto;
+  right: 0;
+}
+.slideshow--contrast .slides {
+  animation: 14s slideshow-contrast -5s infinite;
+}
+.slideshow--contrast .slide1 {
+  background-image: linear-gradient(
+      to bottom,
+      rgba(200, 200, 75, 0.25) 0,
+      rgba(200, 75, 75, 0.5) 100%
+    ),
+    url(../images/el\ jebha.jpg);
+  animation: 20s slides-set-1 -0.2s infinite;
+}
+.slideshow--contrast .slide2 {
+  background-image: linear-gradient(
+      to bottom,
+      rgba(200, 200, 75, 0.25) 0,
+      rgba(200, 75, 75, 0.5) 100%
+    ),
+    url(../images/todgha.jpg);
+  animation: 20s slides-set-2 -0.2s infinite;
+}
+.slideshow--contrast .slide3 {
+  background-image: linear-gradient(
+      to bottom,
+      rgba(200, 200, 75, 0.25) 0,
+      rgba(200, 75, 75, 0.5) 100%
+    ),
+    url(../images/daliya.jpg);
+  animation: 20s slides-set-3 -0.2s infinite;
+}
+.slideshow--contrast--after {
+  top: auto;
+  bottom: 0;
+}
+.slideshow--contrast--after .slides {
+  animation: 13s slideshow-contrast -13s infinite;
+}
+.slideshow--contrast--after .slide {
+  background-position: right;
+}
+.slideshow--contrast--after .slide1 {
+  animation: 20s slides-set-1 infinite;
+}
+.slideshow--contrast--after .slide2 {
+  animation: 20s slides-set-2 infinite;
+}
+.slideshow--contrast--after .slide3 {
+  animation: 20s slides-set-3 infinite;
+}
+@media (min-width: 600px) {
+  .slideshow--contrast {
+    width: 50%;
+    height: 100%;
+  }
+  .slideshow--contrast--after {
+    top: 0;
+    bottom: auto;
+  }
+  .slideshow--contrast--after .slides {
+    width: 50vw;
+  }
+}
+
+.slides,
+.slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+@keyframes slideshow-first-mobile {
+  0% {
+    transform: scale(1) skewY(10deg);
+  }
+  50% {
+    transform: scale(1.05) skewY(10deg);
+  }
+  100% {
+    transform: scale(1) skewY(10deg);
+  }
+}
+@keyframes slideshow-first {
+  0% {
+    transform: scale(1) skewX(10deg);
+  }
+  50% {
+    transform: scale(1.05) skewX(10deg);
+  }
+  100% {
+    transform: scale(1) skewX(10deg);
+  }
+}
+@keyframes slideshow-contrast {
+  0% {
+    transform: scale(1.05);
+  }
+  50% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.05);
+  }
+}
+@keyframes slides-set-1 {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  31% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  34% {
+    opacity: 0;
+    transform: scale(1.05);
+  }
+  97% {
+    opacity: 0;
+    transform: scale(1.05);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+@keyframes slides-set-2 {
+  0% {
+    opacity: 0;
+    transform: scale(1.05);
+  }
+  31% {
+    opacity: 0;
+    transform: scale(1.05);
+  }
+  34% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  64% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  67% {
+    opacity: 0;
+    transform: scale(1.05);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1.05);
+  }
+}
+@keyframes slides-set-3 {
+  0% {
+    opacity: 0;
+    transform: scale(1.05);
+  }
+  64% {
+    opacity: 0;
+    transform: scale(1.05);
+  }
+  67% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  97% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1.05);
+  }
+}
+
+/* navbar */
+.welcomeText {
+  font-family: "Dancing Script", cursive;
+  position: absolute;
+  font-weight: bold;
+  font-size: 100px;
+  top: 200px;
+  text-align: center;
+  left: 300px;
+  z-index: 3;
+}
+.navContainer {
+  position: fixed;
+  top: 0px;
+  left: 90px;
+  width: 100vw;
+  height: 100px;
+  z-index: 3;
+  display: flex;
+  background-color: white;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  margin-left: -90px;
+}
+.sticky {
+  transition: all 0.8s ease-in-out;
+  background-color: rgb(255, 255, 255);
+  z-index: 6;
+}
+.logoContainer {
+  width: 30%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-left: -150px;
+}
+.logoContainer img {
+  width: 80px;
+  height: 76px;
+}
+.logoContainer h3 {
+  font-family: "Comic Sans MS";
+  font-style: normal;
+  font-size: 18px;
+  text-align: center;
+  color: rgb(0, 0, 0);
+}
+
+.navLinks {
+  width: 40%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.focused {
+  color: black !important;
+}
+.navLinks a {
+  font-family: "Comic Sans MS";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 18px;
+  text-align: center;
+  color: rgb(124, 124, 124);
+  text-decoration: none;
+}
+.navlinks a:hover {
+  font-size: 20px;
+}
+
+/*!passions */
+.passion {
+  position: absolute;
+  top: 110vh;
+  left: 150px;
+  margin-bottom: 200px;
+  width: 80%;
+}
+.passionsTitle {
+  margin-top: 50px;
+  margin-bottom: 100px;
+  font-size: 30px;
+  font-family: "Comic Sans MS";
+}
+.passionsGrid {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+  margin: auto;
+}
+.passionsGrid img {
+  border-radius: 15px;
+}
+/* !Categories */
+.categories {
+  position: absolute;
+  top: 190vh;
+  padding-bottom: 80px;
+  margin-bottom: 200px;
+  width: 100%;
+  background-color: rgba(0, 107, 183, 0.42);
+}
+.categoriesTitle {
+  margin-top: 50px;
+  margin-bottom: 70px;
+  margin-left: 150px;
+  font-size: 30px;
+  font-family: "Comic Sans MS";
+}
+.categoriesGrid {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  align-items: center;
+  margin: auto;
+}
+.categoriesGrid img {
+  border-radius: 50px;
+}
+/* !Suggestions */
+.propositions {
+  position: absolute;
+  top: 250vh;
+}
+.prpositionsTitle {
+  text-align: center;
+  font-size: 30px;
+  margin-top: 300px;
+  margin-bottom: 100px;
+  font-family: "Comic Sans MS";
+}
+.prpositionsGrid {
+  margin: 5px 5px 5px 5px;
+  width: 80%;
+  margin: auto;
+}
+.prposition {
+  width: 80%;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.prposition img {
+  width: 500px;
+  height: 350px;
+  margin: 0px 50px 200px 0px;
+}
+
+.description h3 {
+  font-size: 20px;
+  font-family: "Comic Sans MS";
+  text-decoration: none;
+  color: black;
+}
+.description p {
+  font-size: 20px;
+  font-family: "Comic Sans MS";
+  text-decoration: none;
+  color: black;
+  width: 80%;
+  text-align: justify;
+}
+
+footer {
+  position: absolute;
+  top: 309vw;
+  display: flex;
+  flex-direction: row;
+  height: 250px;
+  padding: 20px;
+  background-color: rgba(19, 55, 115, 1);
+  width: 100%;
+}
+.leftSide img {
+  height: 100px;
+  width: 100px;
+  padding-left: 50px;
+}
+.leftSide p {
+  color: white;
+  padding-left: 50px;
+  font-size: 24px;
+  font-family: "Comic Sans Ms";
+}
+.leftSide {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  margin-right: 100px;
+  margin-left: 50px;
+}
+.rightSide {
+  display: flex;
+  flex-direction: column;
+  color: white;
+  font-family: "Comic Sans Ms";
+}
+.location {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+.location img {
+  width: 20px;
+  height: 20px;
+  margin-right: 20px;
+}
+.phone img {
+  width: 20px;
+  height: 20px;
+  margin-right: 20px;
+}
+.phone {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+}

@@ -1,0 +1,320 @@
+body {
+  padding: 0;
+  margin: 0;
+  width: 100vw;
+  overflow-x: hidden;
+  background-color: rgb(255, 255, 255);
+}
+a{
+  text-decoration: none;
+}
+.navContainer {
+  position: fixed;
+  top: 0px;
+  left: 90px;
+  width: 100vw;
+  height: 80px;
+  z-index: 3;
+  display: flex;
+  background-color: white;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  margin-left: -90px;
+}
+.sticky {
+  transition: all 0.8s ease-in-out;
+  background-color: rgb(255, 255, 255);
+  z-index: 6;
+}
+.logoContainer {
+  width: 30%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-left: -150px;
+}
+.logoContainer img {
+  width: 80px;
+  height: 76px;
+}
+.logoContainer h3 {
+  font-family: "Comic Sans MS";
+  font-style: normal;
+  font-size: 18px;
+  text-align: center;
+  color: rgb(0, 0, 0);
+}
+
+.navLinks {
+  width: 40%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.focused {
+  color: black !important;
+}
+.navLinks a {
+  font-family: "Comic Sans MS";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 18px;
+  text-align: center;
+  color: rgb(124, 124, 124);
+  text-decoration: none;
+}
+.navlinks a:hover {
+  font-size: 20px;
+}
+
+.loginContainer {
+  position: relative;
+  top: 0;
+  background-image: url(../images/LoginBackgroungImg.jpg);
+  height: 100vh;
+  width: 100vw;
+  margin-top: 80px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.elementsContainer {
+  position: absolute;
+  width: 500px;
+  height: 550px;
+  left: 32vw;
+  top: 20px;
+  background: #ffffff;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 14px 17px 4px rgba(0, 0, 0, 0.25),
+    14px 17px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 30px;
+}
+.loginSignUpText {
+  width: 50%;
+  margin: auto;
+  font-size: 15px;
+  font-family: "Comic Sans MS";
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  right: -10px;
+  margin-bottom: 20px;
+}
+.loginSignUpText a h1 {
+  color: gray;
+}
+.userLogo {
+  align-items: center;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.userLogo img {
+  width: 50px;
+  height: 50px;
+  margin: auto;
+}
+
+.inputs {
+  width: 80%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.login {
+  margin-top: 50px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.login input {
+  border-radius: 51px;
+  background: #d6d6d6;
+  border: none;
+  padding-left: 25px;
+  margin-left: 50px;
+  height: 50px;
+  width: 80%;
+}
+.login img {
+  width: 30px;
+  height: 25px;
+}
+.password {
+  margin-top: 30px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.password input {
+  border-radius: 51px;
+  background: #d6d6d6;
+  border: none;
+  padding-left: 25px;
+  margin-left: 50px;
+  height: 50px;
+  width: 80%;
+}
+.password img {
+  width: 30px;
+  height: 29px;
+}
+
+.submitBtn {
+  width: 150px;
+  height: 50px;
+  margin: auto;
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(30, 65, 131, 0.9);
+  border-radius: 30px;
+  border: none;
+  font-family: "Comic Sans MS";
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+  margin-bottom: 35px;
+}
+.or {
+  position: relative;
+  width: 50px;
+  height: 30px;
+  background-color: white;
+  bottom: 28px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  left: 45%;
+  font-family: "Comic Sans MS";
+  font-size: 20px;
+}
+.socialMediaLogin {
+  width: 80%;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.google {
+  width: 150px;
+  height: 50px;
+  margin: auto;
+  margin-top: -20px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: rgba(30, 65, 131, 0.9);
+  border-radius: 30px;
+  border: none;
+  font-family: "Comic Sans MS";
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+}
+.google button {
+  border: none;
+  color: white;
+  background-color: transparent;
+  font-family: "Comic Sans MS";
+}
+.google img {
+  width: 30px;
+  height: 30px;
+}
+.facebook {
+  width: 150px;
+  height: 50px;
+  margin: auto;
+  margin-top: -20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(202, 202, 202, 0.9);
+  border-radius: 30px;
+  border: none;
+  font-family: "Comic Sans MS";
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.facebook button {
+  border: none;
+  color: rgb(0, 0, 0);
+  background-color: transparent;
+  font-family: "Comic Sans MS";
+}
+.facebook img {
+  width: 30px;
+  height: 30px;
+}
+
+footer {
+  position: absolute;
+  top: 50vw;
+  display: flex;
+  flex-direction: row;
+  height: 200px;
+  padding: 20px;
+  background-color: rgba(19, 55, 115, 1);
+  width: 100%;
+}
+.leftSide img {
+  height: 80px;
+  width: 80px;
+  padding-left: 50px;
+}
+.leftSide p {
+  color: white;
+  padding-left: 50px;
+  font-size: 24px;
+  font-family: "Comic Sans Ms";
+}
+.leftSide {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  margin-right: 100px;
+  margin-left: 50px;
+}
+.rightSide {
+  display: flex;
+  flex-direction: column;
+  color: white;
+  font-family: "Comic Sans Ms";
+}
+.location {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+.location img {
+  width: 20px;
+  height: 20px;
+  margin-right: 20px;
+}
+.phone img {
+  width: 20px;
+  height: 20px;
+  margin-right: 20px;
+}
+.phone {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+}

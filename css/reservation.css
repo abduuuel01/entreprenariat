@@ -1,0 +1,248 @@
+body{
+    overflow-x: hidden;
+    padding: 0;
+    margin: 0;
+}
+.welcomeText {
+    font-family: "Dancing Script", cursive;
+    position: absolute;
+    font-weight: bold;
+    font-size: 100px;
+    top: 250px;
+    text-align: center;
+    left: 380px;
+    z-index: 3;
+  }
+  .navContainer {
+    position: fixed;
+    top: 0px;
+    left: 90px;
+    width: 100vw;
+    height: 100px;
+    z-index: 3;
+    display: flex;
+    background-color: white;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin-left: -90px;
+  }
+  .sticky {
+    transition: all 0.8s ease-in-out;
+    background-color: rgb(255, 255, 255);
+    z-index: 6;
+  }
+  .logoContainer {
+    width: 30%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-left: -150px;
+  }
+  .logoContainer img {
+    width: 80px;
+    height: 76px;
+  }
+  .logoContainer h3 {
+    font-family: "Comic Sans MS";
+    font-style: normal;
+    font-size: 18px;
+    text-align: center;
+    color: rgb(0, 0, 0);
+  }
+  
+  .navLinks {
+    width: 40%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .focused {
+    color: black !important;
+  }
+  .navLinks a {
+    font-family: "Comic Sans MS";
+    font-style: normal;
+    font-weight: 800;
+    font-size: 18px;
+    text-align: center;
+    color: rgb(124, 124, 124);
+    text-decoration: none;
+  }
+  .navlinks a:hover {
+    font-size: 20px;
+  }
+
+  .panierImg{
+      width: 40px;
+  }
+  .profileImg{
+      width: 35px;
+  }
+  .sectionTitle{
+     position: relative;
+     font-size: 45px;
+     font-family: "Comic Sans Ms";
+     justify-content: center;
+     align-items: center;
+     width: 7%;
+     top: 110px;
+     margin: auto;
+  }
+  .sectionTitle1{
+    position: relative;
+    font-size: 45px;
+    font-family: "Comic Sans Ms";
+    justify-content: center;
+    align-items: center;
+    width: 12%;
+    top: 110px;
+    margin: auto;
+ }
+  .sectionTitle2{
+    position: relative;
+    font-size: 45px;
+    font-family: "Comic Sans Ms";
+    justify-content: center;
+    align-items: center;
+    width: 15%;
+    top: 110px;
+    margin: auto;
+ }
+  .hotelsContainer{
+      display: flex;
+      flex-direction: row;
+      width: 100vw;
+      justify-content: space-around;
+      align-items: center;
+      position: relative;
+      top: 180px;
+      margin-bottom: 200px;
+  }
+  .hotelsContainer img{
+      width: 250px;
+      margin-bottom: -10px;
+  }
+  .hotel{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+  }
+  .hotel h3{
+      font-family: "Comic Sans Ms";
+  }
+  .hotel h4{
+      font-family: "Comic Sans Ms";
+  }
+  .stars{
+      width: 150px !important;
+      margin-top: -15px !important;
+  }
+  .icons{
+      margin-top: -15px;
+  }
+  .addPanierIcon{
+      width: 50px !important;
+  }
+  .detailsIcon{
+      width: 50px !important;
+  }
+  .hotel a{
+      text-decoration: none;
+      color: black;
+      text-align: center;
+  }
+  .departCity{
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+      align-items: center;
+      width: 30%;
+      position: relative;
+      left: 70%;
+      top: 150px;
+  }
+  .departCity h3{
+      font-size: 30px;
+      font-family: "Comic Sans Ms";
+  }
+
+  select{
+      background-color: rgba(134, 128, 128, 1);
+      color: white;
+      font-size: 20px;
+      font-family: "Comic Sans Ms";
+  }
+  .transportation{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+  }
+  .transportation img{
+      width: 80vw;
+      margin-top: 150px;
+      cursor: pointer;
+  }
+
+
+ /*!footer */
+  footer {
+    position: absolute;
+    top: 275vw;
+    display: flex;
+    flex-direction: row;
+    height: 250px;
+    padding: 20px;
+    background-color: rgba(19, 55, 115, 1);
+    width: 100%;
+  }
+  .leftSide img {
+    height: 100px;
+    width: 100px;
+    padding-left: 50px;
+  }
+  .leftSide p {
+    color: white;
+    padding-left: 50px;
+    font-size: 24px;
+    font-family: "Comic Sans Ms";
+  }
+  .leftSide {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin-right: 100px;
+    margin-left: 50px;
+  }
+  .rightSide {
+    display: flex;
+    flex-direction: column;
+    color: white;
+    font-family: "Comic Sans Ms";
+  }
+  .location {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+  }
+  .location img {
+    width: 20px;
+    height: 20px;
+    margin-right: 20px;
+  }
+  .phone img {
+    width: 20px;
+    height: 20px;
+    margin-right: 20px;
+  }
+  .phone {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+  }
